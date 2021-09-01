@@ -7,15 +7,8 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "css-loader": "^6.2.0",
-    "csv-loader": "^3.0.3",
-    "json5": "^2.2.0",
-    "style-loader": "^3.2.1",
-    "toml": "^3.0.0",
     "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "xml-loader": "^1.2.1",
-    "yamljs": "^0.3.0"
+    "webpack-cli": "^4.8.0"
   },
   "scripts": {
     "build": "webpack",
