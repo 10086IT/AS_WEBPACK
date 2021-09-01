@@ -1,5 +1,6 @@
 const path = require('path');
 const CSSTest = /\.css$/i;
+const ImageTest = /\.(png|svg|jpg|jpeg|gif)$/i ;
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -11,6 +12,10 @@ module.exports = {
             {
                 test: CSSTest,
                 use: ['style-loader','css-loader']
+            },
+            {
+                test:ImageTest,
+                type: 'asset/resource'
             }
         ]
     }
