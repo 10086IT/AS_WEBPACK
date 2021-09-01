@@ -2,8 +2,10 @@
   "name": "as_webpack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {},
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
