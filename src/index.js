@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import './css.css'
-import ImageA from './a.PNG'
+import ImageA from './a.PNG';
+import Data from './data.xml';
+import Notes from './data.csv';
 function component() {
     const element = document.createElement('div');
 
@@ -12,5 +14,6 @@ function component() {
     element.appendChild(myImg);
     return element;
 }
-
+console.log(Notes);
+console.log(Data);
 document.body.appendChild(component());
