@@ -11,7 +11,7 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
-    "build": "npx webpack --config webpack.config.js",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
