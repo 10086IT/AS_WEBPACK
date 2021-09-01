@@ -2,6 +2,8 @@ const path = require('path');
 const CSSTest = /\.css$/i;
 const ImageTest = /\.(png|svg|jpg|jpeg|gif)$/i;
 const fontTest = /\.(woff|woff2|eot|ttf|otf)$/i;
+const XmlTest = /\.xml$/i;
+const CsvAndTsvTest =  /\.(csv|tsv)$/i;
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -23,11 +25,11 @@ module.exports = {
                 type: 'asset/resource'
             },
             {
-                test: /\.(csv|tsv)$/i,
+                test: CsvAndTsvTest,
                 use: ['csv-loader'],
             },
             {
-                test: /\.xml$/i,
+                test: XmlTest,
                 use: ['xml-loader'],
             },
         ]
