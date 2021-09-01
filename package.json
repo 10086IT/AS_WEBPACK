@@ -11,7 +11,8 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
-    "build": "webpack",
+    "dev": "webpack --mode development",
+    "prd": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +20,6 @@
     "url": "https://github.com/github01user/AS_WEBPACK.git"
   },
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/github01user/AS_WEBPACK/issues"
   },
