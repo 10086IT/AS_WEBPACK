@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "webpack",
+    "watch": "webpack --watch",
     "dev": "webpack --mode development",
     "prd": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
