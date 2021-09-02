@@ -7,7 +7,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    another: './src/another-module.js',
   },
   devServer: {
     static: './dist',
@@ -22,15 +21,5 @@ module.exports = {
     filename: WerbpackFileName.bind(this),
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
   },
 };
