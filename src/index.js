@@ -5,6 +5,7 @@ async function component() {
     element.onclick = function(){
         this.innerHTML= Math.random();
         console.log(this);
+        import(/* webpackPrefetch: true */ './fetch');
     }
     return element;
 }
