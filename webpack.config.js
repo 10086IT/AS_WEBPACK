@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const WerbpackFileName = (e)=>{
+  return `${e.chunk.name}.js`
+}
 module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
-        print: './src/print.js',
+        another:'./src/another-module.js',
     },
     devServer: {
         static: './dist',
@@ -17,9 +19,8 @@ module.exports = {
     ],
     devtool: 'inline-source-map',//不能用于生产环境，会出事
     output: {
-        filename: '[name].bundle.js',
+        filename: WerbpackFileName.bind(this),
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: '/',
     },
 };
