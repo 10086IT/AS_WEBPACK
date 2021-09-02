@@ -1,26 +1,33 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WerbpackFileName = (e)=>{
+const WerbpackFileName = (e) => {
   return `${e.chunk.name}.js`
 }
 module.exports = {
-    mode: 'development',
-    entry: {
-        index: './src/index.js',
-        another:'./src/another-module.js',
+  mode: 'development',
+  entry: {
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared',
     },
-    devServer: {
-        static: './dist',
+    another: {
+      import: './src/another-module.js',
+      dependOn: 'shared',
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'development',
-        }),
-    ],
-    devtool: 'inline-source-map',//不能用于生产环境，会出事
-    output: {
-        filename: WerbpackFileName.bind(this),
-        path: path.resolve(__dirname, 'dist'),
-        clean: true,
-    },
+    shared: 'lodash',
+  },
+  devServer: {
+    static: './dist',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'development',
+    }),
+  ],
+  devtool: 'inline-source-map',//不能用于生产环境，会出事
+  output: {
+    filename: WerbpackFileName.bind(this),
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
 };
