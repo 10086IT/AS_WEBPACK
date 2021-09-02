@@ -6,15 +6,8 @@ const WerbpackFileName = (e) => {
 module.exports = {
   mode: 'development',
   entry: {
-    index: {
-      import: './src/index.js',
-      dependOn: 'shared',
-    },
-    another: {
-      import: './src/another-module.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash',
+    index: './src/index.js',
+    another: './src/another-module.js',
   },
   devServer: {
     static: './dist',
@@ -31,6 +24,13 @@ module.exports = {
     clean: true,
   },
   optimization: {
-    runtimeChunk: 'single',//生成runtime.js
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 };
