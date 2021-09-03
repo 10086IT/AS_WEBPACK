@@ -1,7 +1,8 @@
+import './main.js';
 function component() {
     const element = document.createElement('div');
 
-    element.innerHTML = '听音乐'; 
+    element.innerHTML = '听音乐';
     element.onclick = (e)=>{
         element.innerHTML= Math.random();
         console.log(this);
@@ -9,5 +10,5 @@ function component() {
     }
     return element;
 }
-document.body.appendChild(component()); 
+document.body.appendChild(component());
 
